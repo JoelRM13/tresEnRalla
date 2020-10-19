@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title>Tres en Raya</title>
+    <script src="3enraya.js"></script>
 </head>
 
 <body>
@@ -16,28 +18,29 @@
             </div>
             <aside id="sidebar">
                 <div class="lateral">
-                    <a class="button" href="#"> Iniciar sesión </a>
+                    <a class="button" href="login.html"> Iniciar sesión </a>
                 </div>
 
 
                 <div class="lateral">
-                    <a class="button" href="#">Registrarse</a>
+                    <a class="button" href="register.html">Registrarse</a>
                 </div>
 
             </aside>
         </header>
+	</div>
         <section id="content">
             <div id="pantallaJuego">
                 <div id="contenedorCajas">
-                    <div class="caja"></div>
-                    <div class="caja"></div>
-                    <div class="caja"></div>
-                    <div class="caja"></div>
-                    <div class="caja"></div>
-                    <div class="caja"></div>
-                    <div class="caja"></div>
-                    <div class="caja"></div>
-                    <div class="caja"></div>
+                    <div class="caja" id="0" onclick="comprovar('0')"></div>
+                    <div class="caja" id="1" onclick="comprovar('1')"></div>
+                    <div class="caja" id="2" onclick="comprovar('2')"></div>
+                    <div class="caja" id="3" onclick="comprovar('3')"></div>
+                    <div class="caja" id="4" onclick="comprovar('4')"></div>
+                    <div class="caja" id="5" onclick="comprovar('5')"></div>
+                    <div class="caja" id="6" onclick="comprovar('6')"></div>
+                    <div class="caja" id="7" onclick="comprovar('7')"></div>
+                    <div class="caja" id="8" onclick="comprovar('8')"></div>
                 </div>
 
             </div>
@@ -51,14 +54,13 @@
                 <div class="itemJugador">Jugador 4 </div>
                 <div class="itemJugador">Jugador 5</div>
             </section>
-        </section>
         <div class="clearfix"></div>
         <footer id="footer">
             <div class="center">
                 <p>&copy; Proyecto 3 en Raya FP Dual Instituc Bosc de la coma</p>
             </div>
         </footer>
-    </div>
+    
 </body>
 
 </html>
