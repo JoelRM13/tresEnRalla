@@ -83,8 +83,13 @@ function comprovarHoritzontal(vinagre){
         else if (array[i] == vinagre && array[i+1] == '' && array[i+2] == vinagre){
             perill = i+1;
         }
-        else if (array[i] == vinagre && array[i+1] == vinagre && array[i+2] == vinagre){
+        else if (array[i] == vinagre && array[i+1] == vinagre && array[i+2] == vinagre && vinagre == 'O'){
             alert("Has guanyat!!")
+            break;
+        }
+        else if (array[i] == vinagre && array[i+1] == vinagre && array[i+2] == vinagre && vinagre == 'X'){
+            alert("Has perdut!!")
+            break;
         }
     }
     return perill;
@@ -102,8 +107,13 @@ function comprovarVertical(vinagre){
         else if (array[i] == vinagre && array[i+3] == '' && array[i+6] == vinagre){
             perill = i+3;
         }
-        else if (array[i] == vinagre && array[i+3] == vinagre && array[i+6] == vinagre){
+        else if (array[i] == vinagre && array[i+3] == vinagre && array[i+6] == vinagre && vinagre == 'O'){
             alert("Has guanyat!!")
+            break;
+        }
+        else if (array[i] == vinagre && array[i+3] == vinagre && array[i+6] == vinagre && vinagre == 'X'){
+            alert("Has perdut!!")
+            break;
         }
     }
     return perill;
@@ -121,8 +131,13 @@ function comprovarDiagonal(vinagre){
         else if (array[4-i] == vinagre && array[4] == '' && array[4+i] == vinagre){
             perill = 4;
         }
-        else if (array[4-i] == vinagre && array[4] == vinagre && array[4+i] == vinagre){
+        else if (array[4-i] == vinagre && array[4] == vinagre && array[4+i] == vinagre && vinagre == 'O'){
             alert("Has guanyat!!")
+            break;
+        }
+        else if (array[4-i] == vinagre && array[4] == vinagre && array[4+i] == vinagre && vinagre == 'X'){
+            alert("Has perdut!!")
+            break;
         }
     }
     return perill;
@@ -136,6 +151,4 @@ function randomSinRepetir(){
             else{
                 return numrand;
             }
-}
-        
-
+} 
