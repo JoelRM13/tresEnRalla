@@ -2,6 +2,15 @@
 let array = [];
 crearArray();
 
+function enviarDades(){
+    var article_id = 1;
+    
+        var article = {
+            'title': 'Conectar Firebase',
+        } 
+
+        firebase.database().ref('articles/' + article_id).set(article);
+}
 function comprovar(nom){
     var pieza = document.getElementById(nom);
     if (pieza.textContent == "O" || pieza.textContent == "X"){
@@ -83,13 +92,8 @@ function comprovarHoritzontal(vinagre){
         else if (array[i] == vinagre && array[i+1] == '' && array[i+2] == vinagre){
             perill = i+1;
         }
-        else if (array[i] == vinagre && array[i+1] == vinagre && array[i+2] == vinagre && vinagre == 'O'){
+        else if (array[i] == vinagre && array[i+1] == vinagre && array[i+2] == vinagre){
             alert("Has guanyat!!")
-            break;
-        }
-        else if (array[i] == vinagre && array[i+1] == vinagre && array[i+2] == vinagre && vinagre == 'X'){
-            alert("Has perdut!!")
-            break;
         }
     }
     return perill;
@@ -107,13 +111,8 @@ function comprovarVertical(vinagre){
         else if (array[i] == vinagre && array[i+3] == '' && array[i+6] == vinagre){
             perill = i+3;
         }
-        else if (array[i] == vinagre && array[i+3] == vinagre && array[i+6] == vinagre && vinagre == 'O'){
+        else if (array[i] == vinagre && array[i+3] == vinagre && array[i+6] == vinagre){
             alert("Has guanyat!!")
-            break;
-        }
-        else if (array[i] == vinagre && array[i+3] == vinagre && array[i+6] == vinagre && vinagre == 'X'){
-            alert("Has perdut!!")
-            break;
         }
     }
     return perill;
@@ -131,13 +130,8 @@ function comprovarDiagonal(vinagre){
         else if (array[4-i] == vinagre && array[4] == '' && array[4+i] == vinagre){
             perill = 4;
         }
-        else if (array[4-i] == vinagre && array[4] == vinagre && array[4+i] == vinagre && vinagre == 'O'){
+        else if (array[4-i] == vinagre && array[4] == vinagre && array[4+i] == vinagre){
             alert("Has guanyat!!")
-            break;
-        }
-        else if (array[4-i] == vinagre && array[4] == vinagre && array[4+i] == vinagre && vinagre == 'X'){
-            alert("Has perdut!!")
-            break;
         }
     }
     return perill;
@@ -151,4 +145,6 @@ function randomSinRepetir(){
             else{
                 return numrand;
             }
-} 
+}
+        
+
