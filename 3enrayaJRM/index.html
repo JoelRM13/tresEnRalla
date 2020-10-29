@@ -25,23 +25,23 @@
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         var firebaseConfig = {
-            apiKey: "AIzaSyAqdaIiZlA9l3f-X9X2je2ypw9NxK81RbI",
-            authDomain: "tresenraya-2042e.firebaseapp.com",
-            databaseURL: "https://tresenraya-2042e.firebaseio.com/",
-            projectId: "tresenraya-2042e",
-            storageBucket: "tresenraya-2042e.appspot.com",
-            messagingSenderId: "435206644169",
-            appId: "1:435206644169:web:3861fff2920fe7ffc5c818",
-            measurementId: "G-58PQBJ918S"
+            /* apiKey: "AIzaSyAqdaIiZlA9l3f-X9X2je2ypw9NxK81RbI",
+             authDomain: "tresenraya-2042e.firebaseapp.com",
+             databaseURL: "https://tresenraya-2042e.firebaseio.com/",
+             projectId: "tresenraya-2042e",
+             storageBucket: "tresenraya-2042e.appspot.com",
+             messagingSenderId: "435206644169",
+             appId: "1:435206644169:web:3861fff2920fe7ffc5c818",
+             measurementId: "G-58PQBJ918S"*/
 
-            /* apiKey: "AIzaSyBWolK0afccwJ6zLywP9sybbXS4nmX7yEY",
-             authDomain: "tresenratllapro.firebaseapp.com",
-             databaseURL: "https://tresenratllapro.firebaseio.com",
-             projectId: "tresenratllapro",
-             storageBucket: "tresenratllapro.appspot.com",
-             messagingSenderId: "702562525648",
-             appId: "1:702562525648:web:1c2fddc39190abf46b59d5",
-             measurementId: "G-0QDFKB2EV2"*/
+            apiKey: "AIzaSyBWolK0afccwJ6zLywP9sybbXS4nmX7yEY",
+            authDomain: "tresenratllapro.firebaseapp.com",
+            databaseURL: "https://tresenratllapro.firebaseio.com",
+            projectId: "tresenratllapro",
+            storageBucket: "tresenratllapro.appspot.com",
+            messagingSenderId: "702562525648",
+            appId: "1:702562525648:web:1c2fddc39190abf46b59d5",
+            measurementId: "G-0QDFKB2EV2"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
@@ -118,28 +118,50 @@
         <div class="container">
             <div class="row ">
                 <div class="col-lg-8 col-md-8 col-sm-8 col" id="pantallaJuego">
-                    <div id="contenedorCajas">
-                        <div class="caja" id="0" onclick="comprovar('0')"></div>
-                        <div class="caja" id="1" onclick="comprovar('1')"></div>
-                        <div class="caja" id="2" onclick="comprovar('2')"></div>
-                        <div class="caja" id="3" onclick="comprovar('3')"></div>
-                        <div class="caja" id="4" onclick="comprovar('4')"></div>
-                        <div class="caja" id="5" onclick="comprovar('5')"></div>
-                        <div class="caja" id="6" onclick="comprovar('6')"></div>
-                        <div class="caja" id="7" onclick="comprovar('7')"></div>
-                        <div class="caja" id="8" onclick="comprovar('8')"></div>
+                    <!-- <div id="contenedorCajas">-->
+                    <div class="tablero">
+                        <div class="row">
+                            <div class="caja col-lg-4 col-md-4 col-sm-4 col" id="0" onclick="comprovar('0')"></div>
+                            <div class="caja col-lg-4 col-md-4 col-sm-4 col" id="1" onclick="comprovar('1')"></div>
+                            <div class="caja col-lg-4 col-md-4 col-sm-4 col" id="2" onclick="comprovar('2')"></div>
+
+                        </div>
+                        <div class="row">
+                            <div class="caja col-lg-4 col-md-4 col-sm-4 col" id="3" onclick="comprovar('3')"></div>
+                            <div class="caja col-lg-4 col-md-4 col-sm-4 col" id="4" onclick="comprovar('4')"></div>
+                            <div class="caja col-lg-4 col-md-4 col-sm-4 col" id="5" onclick="comprovar('5')"></div>
+
+                        </div>
+                        <div class="row">
+                            <div class="caja col-lg-4  col-md-4 col-sm-4 col" id="6" onclick="comprovar('6')"></div>
+                            <div class="caja col-lg-4 col-md-4 col-sm-4 col" id="7" onclick="comprovar('7')"></div>
+                            <div class="caja col-lg-4 col-md-4 col-sm-4 col" id="8" onclick="comprovar('8')"></div>
+
+                        </div>
                     </div>
+                    <!-- </div>-->
                 </div>
                 <div class="rankingdiv col-lg-4 col-md-4 col-sm-4 col">
                     <section id="ranking">
-                        <div id="headerRanking">
-                            <h2>Los Mejores jugadores</h2>
+
+                        <div class="tableroRanking">
+
+                            <div class="row" id="headerRanking">
+                                <h2>Los Mejores jugadores</h2>
+                            </div>
+                            <div class="row">
+                                <div class="itemJugador">Jugador 1 </div>
+                            </div>
+                            <div class="row">
+                                <div class="itemJugador">Jugador 2 </div>
+                            </div>
+                            <div class="row">
+                                <div class="itemJugador">Jugador 3 </div>
+                            </div>
+                            <div class="row">
+                                <div class="itemJugador">Jugador 4 </div>
+                            </div>
                         </div>
-                        <div class="itemJugador">Jugador 1 </div>
-                        <div class="itemJugador">Jugador 2 </div>
-                        <div class="itemJugador">Jugador 3 </div>
-                        <div class="itemJugador">Jugador 4 </div>
-                        <div class="itemJugador">Jugador 5</div>
                     </section>
                 </div>
             </div>
